@@ -1,4 +1,4 @@
-package com.mobulum;
+package com.mobulum.service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
