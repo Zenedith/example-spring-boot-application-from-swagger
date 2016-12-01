@@ -1,6 +1,9 @@
 {
   "generator-spring-boot-application-from-swagger": {
     "packageName": "com.mobulum",
-    "packageFolder": "com/mobulum"
+    "packageFolder": "com/mobulum",
+    "basePackageName": "com.mobulum",
+    "restPackage": "rest",
+    "controllersPackage": "controllers"
   }
 }
