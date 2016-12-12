@@ -13,7 +13,7 @@ yo spring-boot-application-from-swagger
 ? Enter default base package name: com.mobulum
 ? Enter base name of app: app
 ? Enter controller class suffix: Controller
-? Path (or URL) to swagger document: http://petstore.swagger.io/v2/swagger.json
+? Path (or URL) to swagger document: https://raw.githubusercontent.com/mobulum/example-spring-boot-application-from-swagger/master/pet-store-swagger.json
 ```
 
 Generated file structure for given example looks like this
