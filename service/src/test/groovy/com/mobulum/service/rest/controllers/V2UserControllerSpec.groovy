@@ -108,11 +108,11 @@ public class V2UserControllerSpec extends Specification {
 
         then:
         response.andExpect(status().is(HttpStatus.OK.value()))
-                
+                .andExpect(content().contentTypeCompatibleWith(produces))
 
         
         where:
-        produces << ['application/xml', 'application/json']
+        produces << ['text/plain']
     }
     
   

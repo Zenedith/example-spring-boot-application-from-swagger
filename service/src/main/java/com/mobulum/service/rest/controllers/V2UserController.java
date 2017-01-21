@@ -110,25 +110,25 @@ public class V2UserController {
      * summary: Logs user into the system
      * description: 
      * consumes: 
-     * produces: application/xml, application/json
+     * produces: text/plain
      * operationId: loginUser
-     * returnType: void
+     * returnType: String
      */
 
-
-    @RequestMapping(method = RequestMethod.GET, path = "/user/login", produces = {"application/xml", "application/json"})
+    @ResponseBody
+    @RequestMapping(method = RequestMethod.GET, path = "/user/login", produces = {"text/plain"})
     @ResponseStatus(HttpStatus.OK)
     @Timed(absolute = true)
-    @ApiOperation(value = "loginUser", nickname = "loginUser", produces = "application/xml, application/json")
+    @ApiOperation(value = "loginUser", nickname = "loginUser", produces = "text/plain")
     @ApiResponses(value = {
         @ApiResponse(code = 200, message = "successful operation"),
         @ApiResponse(code = 400, message = "Invalid username/password supplied")
     })
-    public void loginUser(
+    public String loginUser(
         @RequestParam("username") String username,
         @RequestParam("password") String password
     ) {
-      
+      return String.valueOf("1");
     }
   
 

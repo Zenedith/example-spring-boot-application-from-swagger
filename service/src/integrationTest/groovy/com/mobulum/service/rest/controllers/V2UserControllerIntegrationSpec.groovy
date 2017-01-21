@@ -151,18 +151,18 @@ public class V2UserControllerIntegrationSpec extends AbstractRestControllerInteg
             
 
         when:
-        def ResponseEntity<Void> responseEntity = restTemplate.exchange(
+        def ResponseEntity<String> responseEntity = restTemplate.exchange(
                         '/v2/user/login?username=user1&password=user-password',
                         HttpMethod.GET,
                         prepareEntity(entity),
-                        Void
+                        String
                 )
         then:
         responseEntity.statusCode.value() == HttpStatus.OK.value()
 
         
         where:
-        produces << ['application/xml', 'application/json']
+        produces << ['text/plain']
     }
     
   
